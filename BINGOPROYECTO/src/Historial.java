@@ -13,6 +13,7 @@ public class Historial extends Tombola {
     }
 
     // Sobrescribir el método sacarNumero para guardar un historial detallado
+
     @Override
     public int sacarNumero() {
         int numeroExtraido = super.sacarNumero();  // Llama al método de la clase base Tombola

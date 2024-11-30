@@ -89,12 +89,12 @@ public class Tablero {
             for (int j = 0; j < 5; j++) {
                 Casilla casilla = tablero[i][j];
                 if (casilla.esLibre()) {
-                    System.out.print("  * ");  // Usamos '*' para la casilla libre
+                    System.out.print("  * ");  // Imprime * para la casilla libre
                 } else {
                     System.out.printf("%3d ", casilla.getNumero());  // Imprime el número de la casilla
                 }
             }
-            System.out.println();  // Salto de línea para la siguiente fila
+            System.out.println();
         }
     }
 
@@ -103,11 +103,4 @@ public class Tablero {
         return tablero;
     }
 
-    public void agregarNumeroEnCasilla(int fila, int columna, int numero, boolean esLibre) {
-        if (fila >= 0 && fila < 5 && columna >= 0 && columna < 5) {
-            tablero[fila][columna] = new Casilla(numero, esLibre);
-        } else {
-            System.out.println("Índices de fila o columna no válidos.");
-        }
-    }
 }
